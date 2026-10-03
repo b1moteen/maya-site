@@ -1,47 +1,39 @@
 <!DOCTYPE html>
 <html lang="ru"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; script-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Спектакль-посвящение Майе Плисецкой. Автор постановки Гедиминас Таранда. Галерея Ильи Глазунова, Волхонка, 13. Билеты от 2500 ₽.">
+<meta name="description" content="Спектакль-посвящение Майе Плисецкой. Автор постановки Гедиминас Таранда. Галерея Ильи Глазунова, Волхонка 13, метро Кропоткинская. Билеты от 2500 ₽.">
 <meta property="og:title" content="Майя Великолепная — балетно-драматический спектакль в Москве">
-<meta property="og:description" content="Спектакль-посвящение Майе Плисецкой. Галерея Ильи Глазунова. Билеты от 2500 ₽.">
+<meta property="og:description" content="Спектакль-посвящение Майе Плисецкой. Галерея Ильи Глазунова, Волхонка 13, метро Кропоткинская. Билеты от 2500 ₽.">
 <meta property="og:type" content="website">
 <title>Майя Великолепная — балетно-драматический спектакль</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prata&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#ecebe9;--pane:rgba(244,243,241,.82);--ink:#16161a;--mut:#74747b;--line:rgba(22,22,26,.16);--card:rgba(255,255,255,.7);--inv:#16161a;--invt:#f4f3f1;--red:#8d2b35;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1a1d;--pane:rgba(28,28,31,.82);--ink:#efeeec;--mut:#9a9aa2;--line:rgba(239,238,236,.18);--card:rgba(255,255,255,.05);--inv:#efeeec;--invt:#16161a}}
-:root[data-theme="dark"]{--bg:#1a1a1d;--pane:rgba(28,28,31,.82);--ink:#efeeec;--mut:#9a9aa2;--line:rgba(239,238,236,.18);--card:rgba(255,255,255,.05);--inv:#efeeec;--invt:#16161a}
+:root{--bg:#ecebe9;--pane:rgba(247,246,244,.6);--sko:.09;--ink:#16161a;--mut:#65656c;--line:rgba(22,22,26,.16);--card:rgba(255,255,255,.7);--inv:#16161a;--invt:#f4f3f1;--red:#8d2b35;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1a1d;--pane:rgba(29,29,32,.6);--sko:.12;--ink:#efeeec;--mut:#9a9aa2;--line:rgba(239,238,236,.18);--card:rgba(255,255,255,.05);--inv:#efeeec;--invt:#16161a}}
+:root[data-theme="dark"]{--bg:#1a1a1d;--pane:rgba(29,29,32,.6);--sko:.12;--ink:#efeeec;--mut:#9a9aa2;--line:rgba(239,238,236,.18);--card:rgba(255,255,255,.05);--inv:#efeeec;--invt:#16161a}
 html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));background:var(--bg)}
 *{box-sizing:border-box;margin:0}
 body{background:transparent;color:var(--ink);font:300 17px/1.65 Jost,system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 h1,h2,h3,.serif{font-family:Prata,Georgia,serif;font-weight:400;line-height:1.05}
+h1,h2,h3,.q{text-wrap:balance}p{text-wrap:pretty}
 img{display:block;max-width:100%}
+small,.facts,nav a,footer,.pc .m,.pc ul,.treas p,.snd{font-weight:400}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}.pc.pm :focus-visible{outline-color:var(--invt)}
 #bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;filter:grayscale(1) contrast(.9);opacity:.3}
 #hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,transparent 60%,var(--bg))}
 .treas .ph{cursor:pointer;transition:.4s}.treas .ph:hover{background:var(--inv);color:var(--invt);transform:translateY(-6px)}.treas .ph:hover p,.treas .ph:hover span{color:inherit}.treas .ph span{font-size:14px;color:var(--ink);margin-top:14px;display:block}
-#lb{position:fixed;inset:0;z-index:120;display:none;align-items:center;justify-content:center;background:rgba(10,10,12,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:20px;cursor:zoom-out}#lb.on{display:flex}#lb img{max-height:90vh;max-width:100%;border-radius:16px;animation:pop .5s cubic-bezier(.2,.9,.2,1)}
+#lb{position:fixed;inset:0;z-index:120;display:none;align-items:center;justify-content:center;background:rgba(10,10,12,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:20px;cursor:zoom-out}#lb.on{display:flex}#lb img{max-height:90vh;max-width:100%;animation:pop .5s cubic-bezier(.2,.9,.2,1)}
 .team{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
-.gm .n{font:400 clamp(30px,3.6vw,50px)/1.1 Prata,serif;display:block;margin-bottom:6px}.gm .r{color:var(--mut)}.gm img{width:100%;border-radius:22px;filter:grayscale(1);margin-top:26px;aspect-ratio:16/10;object-fit:cover}
+.ey{display:block;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);margin-bottom:14px}
+.gm .n{font:400 clamp(30px,3.6vw,50px)/1.1 Prata,serif;display:block;margin-bottom:6px}.gm .r{color:var(--mut)}.gm img{width:100%;height:auto;filter:grayscale(1);margin-top:26px;aspect-ratio:16/10;object-fit:cover}
 .lst div{padding:30px 0;border-bottom:1px solid var(--line);font:400 24px/1.3 Prata,serif}.lst div:first-child{border-top:1px solid var(--line)}
 .rvs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .rw{border:1px solid var(--line);border-radius:24px;padding:30px;background:var(--card);display:flex;flex-direction:column;gap:20px}
 .rw .s{letter-spacing:4px;font-size:15px}.rw p{font:400 19px/1.5 Prata,serif}
 .who{display:flex;gap:14px;align-items:center;margin-top:auto;font-size:15px}.who i{width:44px;height:44px;border-radius:50%;background:var(--inv);color:var(--invt);display:grid;place-items:center;font:400 17px Prata,serif;font-style:normal}.who small{display:block;color:var(--mut);font-size:13px}
-.see{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}
-.sp{position:sticky;top:110px}
-.sa{position:relative;aspect-ratio:4/5;border-radius:999px 999px 26px 26px;overflow:hidden;box-shadow:0 50px 100px -40px rgba(0,0,0,.55)}
-.sa:after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);border-radius:inherit;pointer-events:none}
-.sa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);opacity:0;transform:scale(1.14);transition:opacity 1.1s,transform 7s cubic-bezier(.2,.6,.2,1)}
-.sa img.on{opacity:1;transform:scale(1)}
-.act{border-top:1px solid var(--line);padding:30px 0;cursor:pointer;position:relative}.act:last-child{border-bottom:1px solid var(--line)}
-.act .h{display:flex;justify-content:space-between;align-items:center;gap:20px}
-.act h3{font-size:clamp(40px,5.4vw,80px);letter-spacing:-.02em;opacity:.28;transition:opacity .6s,transform .6s}
-.act svg{flex:0 0 auto;width:40px;height:40px;stroke:currentColor;fill:none;stroke-width:1.1;opacity:.28;transition:.6s}
-.act p{max-height:0;overflow:hidden;opacity:0;color:var(--mut);font-size:19px;max-width:440px;transition:max-height .7s,opacity .7s,margin .7s}
-.act.on h3,.act.on svg{opacity:1}.act.on h3{transform:translateX(10px)}.act.on p{max-height:130px;opacity:1;margin-top:14px}
-.act:after{content:"";position:absolute;left:0;bottom:-1px;height:1px;width:0;background:var(--ink)}
-.act.on:after{animation:pg 5s linear forwards}@keyframes pg{to{width:100%}}
 .vd{display:grid;grid-template-columns:1fr auto;gap:90px;align-items:center}
 .vd p{color:var(--mut);font-size:19px;max-width:420px;margin:-20px 0 32px}
 .vf{position:relative;height:min(78vh,700px);aspect-ratio:9/16;border-radius:30px;overflow:hidden;box-shadow:0 60px 110px -50px rgba(0,0,0,.6)}
@@ -49,27 +41,26 @@ img{display:block;max-width:100%}
 .snd{position:absolute;left:16px;bottom:16px;border:0;border-radius:99px;padding:10px 18px;background:rgba(15,15,18,.6);color:#fff;font:400 14px Jost,sans-serif;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);cursor:pointer}
 .wrap{max-width:1240px;margin:auto;padding:0 28px}
 section{padding:120px 0;position:relative}
-.pane{background:var(--pane);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.pane{background:var(--pane)}
 header{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;transition:.4s}
 header.s{background:var(--pane);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{white-space:nowrap;font-family:Prata,serif;font-size:24px;letter-spacing:.04em;text-decoration:none;color:var(--ink)}
-nav{display:flex;gap:30px;align-items:center}nav a{color:var(--ink);text-decoration:none;font-size:14px;opacity:.7;transition:.3s}nav a:hover{opacity:1}
+nav{display:flex;gap:30px;align-items:center}nav a:not(.btn){color:var(--ink);text-decoration:none;font-size:14px;opacity:.7;transition:.3s}nav a:not(.btn):hover{opacity:1}
 .btn{display:inline-flex;align-items:center;gap:12px;background:var(--inv);color:var(--invt);border:0;border-radius:99px;padding:16px 30px;font:400 15px Jost,sans-serif;cursor:pointer;text-decoration:none;transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
 .btn:hover{box-shadow:0 14px 40px -12px rgba(0,0,0,.5)}
 .btn.o{background:transparent;color:var(--ink);border:1px solid var(--ink)}
 .btn.sm{padding:11px 22px;font-size:14px}
-.btn[disabled]{background:transparent;color:var(--mut);border:1px dashed var(--line);cursor:not-allowed;box-shadow:none}
+.btn.sm,.snd{min-height:44px}
 #hero{overflow:hidden;isolation:isolate;min-height:100vh;display:flex;align-items:center;padding:130px 0 80px}
-#hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:center}
-.eyebrow{font-size:14px;color:var(--mut);display:flex;gap:14px;align-items:center;margin-bottom:28px}.eyebrow i{width:48px;height:1px;background:var(--mut)}
-h1{font-size:clamp(54px,9.4vw,148px);letter-spacing:-.025em}
+#hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:50px;align-items:center}
+h1{font-size:clamp(54px,7.4vw,98px);letter-spacing:-.025em}
 h1 span{display:block;overflow:hidden;padding-bottom:.08em}h1 b{display:inline-block;font-weight:400;transform:translateY(110%);animation:up 1.2s cubic-bezier(.2,.8,.2,1) forwards}
 @keyframes up{to{transform:none}}
 .lead{max-width:470px;margin:34px 0;font-size:19px;color:var(--mut)}.lead strong{color:var(--ink);font-weight:400}
 .cta{display:flex;gap:14px;flex-wrap:wrap}
 .facts{display:flex;gap:40px;margin-top:56px;flex-wrap:wrap;font-size:14px;color:var(--mut)}.facts b{display:block;color:var(--ink);font:400 20px Prata,serif;margin-bottom:2px}
-.arch{border-radius:999px 999px 6px 6px;overflow:hidden;aspect-ratio:3/4.3;position:relative;box-shadow:0 50px 100px -40px rgba(0,0,0,.55);transition:transform .2s;will-change:transform}
+.arch{aspect-ratio:3/4.3;position:relative;overflow:hidden}
 .arch img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);object-position:50% 0;transform-origin:50% 0;animation:z 18s ease-in-out infinite alternate}
 @keyframes z{to{transform:scale(1.05)}}
 .tag{position:absolute;right:-14px;bottom:42px;background:var(--inv);color:var(--invt);padding:12px 20px;border-radius:99px;font-size:14px;transform:rotate(-4deg)}
@@ -81,54 +72,77 @@ h1 span{display:block;overflow:hidden;padding-bottom:.08em}h1 b{display:inline-b
 .two p{color:var(--mut);font-size:18px}
 h2{font-size:clamp(38px,5.4vw,78px);letter-spacing:-.015em;margin-bottom:56px}
 .rail{display:flex;gap:20px;overflow-x:auto;padding:0 28px 30px;scroll-snap-type:x mandatory;scrollbar-width:none}.rail::-webkit-scrollbar{display:none}
-.rail figure{flex:0 0 auto;height:min(64vh,560px);scroll-snap-align:center;border-radius:18px;overflow:hidden;position:relative}
+.rail figure{flex:0 0 auto;height:min(64vh,560px);scroll-snap-align:center;overflow:hidden;position:relative}
 .rail img{height:100%;width:auto;filter:grayscale(1);transition:filter .7s,transform 1.2s}.rail figure:hover img{filter:none;transform:scale(1.04)}
 .treas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .treas div{border:1px solid var(--line);border-radius:18px;padding:30px 24px;background:var(--card);min-height:190px;display:flex;flex-direction:column;justify-content:space-between}
 .treas h3{font-size:22px}.treas p{font-size:14px;color:var(--mut)}
 .ex{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
-.ex img{border-radius:18px;filter:grayscale(1);width:100%}
-.ex .big{display:flex;gap:8px;align-items:baseline;margin:28px 0;font:400 22px Prata,serif}
+.ex img{filter:grayscale(1);width:100%;height:auto}
+.arch{-webkit-mask-image:radial-gradient(ellipse closest-side,#000 52%,transparent);mask-image:radial-gradient(ellipse closest-side,#000 52%,transparent)}
+.gm img,.ex img,.rail figure{-webkit-mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent),linear-gradient(transparent,#000 22%,#000 78%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent),linear-gradient(transparent,#000 22%,#000 78%,transparent);mask-composite:intersect}
+.ex h2{font-size:clamp(34px,4.4vw,62px);margin-bottom:24px}.ex p{color:var(--mut);margin-bottom:20px}.ex p b{display:block;color:var(--ink);font:400 19px Prata,serif;margin-bottom:2px}
+.ex h3{font:400 20px/1.25 Prata,serif;margin-bottom:12px}
+.chips{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}.chips li{border:1px solid var(--line);border-radius:99px;padding:6px 16px;font-size:15px}
+.ex .big{margin:28px 0;font:400 20px/1.3 Prata,serif}.ex .big span{display:block;margin-top:6px;font:400 15px Jost,sans-serif;color:var(--mut)}
 .row{display:grid;grid-template-columns:120px 1fr 120px 200px 170px;gap:18px;align-items:center;padding:26px 0;border-bottom:1px solid var(--line);transition:padding .35s,background .35s}
 .row:hover{padding-left:18px;background:var(--card)}
 .row .d{font:400 44px Prata,serif}.row .w{font-size:16px}.row .w small{display:block;color:var(--mut);font-size:13px}
 .st{font-size:14px;display:flex;align-items:center;gap:10px}.st:before{content:"";width:8px;height:8px;border-radius:50%;background:#5c8a6a}
-.st.low:before{background:#c08a2e}.st.out{color:var(--mut)}.st.out:before{background:var(--red)}
-.row.out .d,.row.out .w{opacity:.45;text-decoration:line-through;text-decoration-thickness:1px}
+.st.low:before{background:#c08a2e}
 .pr{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .pc{border:1px solid var(--line);border-radius:24px;padding:40px 34px;background:var(--card);display:flex;flex-direction:column;gap:14px}
 .pc.pm{background:var(--inv);color:var(--invt);transform:translateY(-18px)}.pc.pm .m{color:inherit;opacity:.65}
-.pc .p{font:400 54px Prata,serif}.pc .m{color:var(--mut);font-size:15px}.pc ul{list-style:none;padding:0;font-size:15px;display:grid;gap:8px}
+.pl{margin:-30px 0 40px;font:400 clamp(22px,2.6vw,30px)/1.2 Prata,serif;color:var(--mut)}
+.pc h3{font-size:40px}.pc .btn{margin-top:auto;justify-content:center}.pc .m{color:var(--mut);font-size:15px}.pc ul{list-style:none;padding:0;font-size:15px;display:grid;gap:8px}
 .pc li:before{content:"— "}
-footer{padding:80px 0 60px;border-top:1px solid var(--line);font-size:15px;color:var(--mut)}footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}footer b{color:var(--ink);font-weight:400;display:block;margin-bottom:6px}
+footer{padding:80px 0 60px;border-top:1px solid var(--line);font-size:15px;color:var(--mut)}footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr auto;gap:40px}footer b{color:var(--ink);font-weight:400;display:block;margin-bottom:6px}footer a[href^="tel"]{color:var(--ink);text-underline-offset:3px;text-decoration-color:var(--line)}
+.qr{display:block;width:max-content;max-width:100%;background:#fff;padding:16px;margin:10px 0 8px}.qr img{width:180px;height:180px}
 .bar{display:none}
-#modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;background:rgba(10,10,12,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:16px}
-#modal.on{display:flex}
-.box{background:var(--bg);color:var(--ink);border-radius:26px;width:min(560px,100%);max-height:92vh;overflow:auto;padding:34px;animation:pop .45s cubic-bezier(.2,.9,.2,1)}
 @keyframes pop{from{transform:translateY(40px) scale(.97);opacity:0}}
-.box h3{font-size:30px;margin-bottom:6px}.box .sub{color:var(--mut);font-size:15px;margin-bottom:22px}
-.box select,.box input{width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:300 16px Jost,sans-serif;margin-bottom:12px}
-.tk{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);gap:10px}.tk small{display:block;color:var(--mut);font-size:13px}
-.ct{display:flex;align-items:center;gap:14px}.ct button{width:34px;height:34px;border-radius:50%;border:1px solid var(--ink);background:none;color:var(--ink);font-size:18px;cursor:pointer}
-.tot{display:flex;justify-content:space-between;align-items:baseline;margin:20px 0}.tot b{font:400 34px Prata,serif}
-.x{float:right;background:none;border:0;color:var(--ink);font-size:28px;cursor:pointer}
-#cur{position:fixed;width:300px;height:300px;margin:-150px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 65%);pointer-events:none;z-index:-1;left:0;top:0}
+#cur{position:fixed;width:300px;height:300px;margin:-150px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 65%);pointer-events:none;z-index:-1;left:0;top:0;opacity:0}
 .rv{opacity:0;transform:translateY(34px);transition:1s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
-@media(max-width:900px){.logo{font-size:17px}.vd{grid-template-columns:1fr;gap:34px}.vf{height:auto;width:min(100%,340px);margin:auto}nav a{display:none}section{padding:80px 0}#hero .wrap,.two,.ex,footer .wrap,.pr{grid-template-columns:1fr}.treas,.team,.rvs,.see{grid-template-columns:1fr}.see{gap:34px}.sp{position:relative;top:0}.sa{aspect-ratio:1/1.05;max-width:420px;margin:0 auto}.act p{font-size:16px}
-.row{grid-template-columns:80px 1fr auto;gap:10px}.row .t,.row .st{display:none}.row .d{font-size:34px}.pc.pm{transform:none}.arch{max-width:340px}.bar{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:40}.bar .btn{width:100%;justify-content:center}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}h1 b{transform:none}}
+#sk{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;color:var(--ink);opacity:var(--sko)}
+#sk svg{position:absolute;width:var(--s);height:var(--s);fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;opacity:.7;animation:skd var(--t) ease-in-out var(--d) infinite}
+@keyframes skd{0%,100%{transform:translate(0,0) rotate(0deg);opacity:.35}50%{transform:translate(14px,-18px) rotate(3deg);opacity:1}}
+#sk svg:nth-child(1){--s:clamp(220px,28vw,400px);--t:32s;--d:-3s;top:5vh;left:-70px;rotate:-24deg}
+#sk svg:nth-child(2){--s:clamp(190px,22vw,330px);--t:27s;--d:-11s;top:12vh;right:-40px;rotate:22deg;animation-direction:reverse}
+#sk svg:nth-child(3){--s:clamp(170px,19vw,290px);--t:36s;--d:-19s;top:48vh;left:-46px;rotate:-64deg}
+#sk svg:nth-child(4){--s:clamp(230px,30vw,440px);--t:24s;--d:-7s;top:40vh;right:-90px;rotate:100deg;animation-direction:reverse}
+#sk svg:nth-child(5){--s:clamp(140px,14vw,220px);--t:39s;--d:-25s;bottom:3vh;left:16vw;rotate:170deg}
+#sk svg:nth-child(6){--s:clamp(170px,20vw,300px);--t:29s;--d:-14s;bottom:-3vh;right:10vw;rotate:-10deg;scale:-1 1}
+@media(max-width:900px){#sk svg:nth-child(n+5){display:none}}
+@media(max-width:900px){.logo{font-size:17px}.vd{grid-template-columns:1fr;gap:34px}.vf{height:auto;width:min(100%,340px);margin:auto}nav a:not(.btn){display:none}.btn.sm{padding:11px 14px;white-space:nowrap}section{padding:80px 0}#hero .wrap,.two,.ex,footer .wrap,.pr{grid-template-columns:1fr}.treas,.team,.rvs{grid-template-columns:1fr}
+.row{grid-template-columns:80px 1fr auto;gap:10px}.row .t,.row .st{display:none}.row .d{font-size:34px}.pc.pm{transform:none}.arch{max-width:340px}.bar{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:40}.bar .btn{width:100%;justify-content:center}footer{padding-bottom:calc(110px + env(safe-area-inset-bottom,0px))}h1{font-size:clamp(40px,11vw,148px)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}h1 b{transform:none}}
 </style></head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="sk-fan" viewBox="0 0 200 200">
+<path vector-effect="non-scaling-stroke" d="M9.9 98.9A12 12 0 0 1 23.6 82.9A12 12 0 0 1 40.1 69.7A12 12 0 0 1 58.8 60A12 12 0 0 1 79 54A12 12 0 0 1 100 52A12 12 0 0 1 121 54A12 12 0 0 1 141.2 60A12 12 0 0 1 159.9 69.7A12 12 0 0 1 176.4 82.9A12 12 0 0 1 190.1 98.9"/>
+<path vector-effect="non-scaling-stroke" d="M59 133.3A50 50 0 0 1 141 133.3M34.5 116.1A80 80 0 0 1 165.5 116.1"/>
+<path vector-effect="non-scaling-stroke" d="M59 133.3L9.9 98.9M65.3 126L23.6 82.9M72.8 120.1L40.1 69.7M81.3 115.6L58.8 60M90.5 112.9L79 54M100 112V52M109.5 112.9L121 54M118.7 115.6L141.2 60M127.2 120.1L159.9 69.7M134.7 126L176.4 82.9M141 133.3L190.1 98.9"/>
+<path vector-effect="non-scaling-stroke" d="M100 162L59 133.3M100 162L72.8 120.1M100 162L90.5 112.9M100 162L109.5 112.9M100 162L127.2 120.1M100 162L141 133.3"/>
+<circle vector-effect="non-scaling-stroke" cx="100" cy="162" r="3.2"/>
+<path vector-effect="non-scaling-stroke" d="M100 165C92 177 112 184 103 197M101 165C114 175 97 186 111 196"/>
+</symbol>
+<symbol id="sk-pt" viewBox="0 0 200 200">
+<path vector-effect="non-scaling-stroke" d="M40 132C30 128 28 104 34 88C60 92 96 100 122 106C142 102 162 100 174 104C182 106 186 112 184 118L183 125C140 129 80 134 40 132Z"/>
+<path vector-effect="non-scaling-stroke" d="M36 94C58 104 92 110 120 108M46 127C90 129 140 125 178 120M150 103C155 110 157 118 155 127M174 105C177 111 177 118 175 124"/>
+<path vector-effect="non-scaling-stroke" d="M122 106C116 98 108 100 112 105C114 108 119 107 122 106C126 98 135 99 132 105C130 108 125 107 122 106L117 113M122 106L126 114"/>
+<path vector-effect="non-scaling-stroke" d="M84 99C88 70 120 66 118 44C116 26 132 16 148 22L150 28C136 22 122 30 124 46C126 70 96 74 90 101M76 98C56 76 22 82 24 58C26 40 50 40 46 22L40 20C44 36 20 34 18 58C14 86 48 82 70 100"/>
+</symbol>
+</svg>
+<div id="sk" aria-hidden="true"><svg><use href="#sk-fan"/></svg><svg><use href="#sk-pt"/></svg><svg><use href="#sk-pt"/></svg><svg><use href="#sk-fan"/></svg><svg><use href="#sk-fan"/></svg><svg><use href="#sk-pt"/></svg></div>
 <div id="cur"></div>
-<header id="hd"><div class="wrap"><a class="logo" href="#top">Майя Великолепная</a><nav><a href="#about">О спектакле</a><a href="#see">Программа</a><a href="#gal">Галерея</a><a href="#rev">Отзывы</a><a href="#dates">Даты</a><a href="#price">Цены</a><button class="btn sm" data-buy>Купить билет</button></nav></div></header>
+<header id="hd"><div class="wrap"><a class="logo" href="#top">Майя Великолепная</a><nav><a href="#about">О спектакле</a><a href="#gal">Галерея</a><a href="#rev">Отзывы</a><a href="#dates">Даты</a><a href="#price">Цены</a><a class="btn sm" data-buy href="https://icetickets.ru/meropriyatie/-baletno-dramaticheskiy-spektakl-mayya-velikolepnaya--000044326" target="_blank" rel="noopener noreferrer">Купить билет</a></nav></div></header>
 
 <main id="top">
 <section id="hero"><video id="bg" src="assets/hero-video.mp4" muted loop playsinline autoplay preload="auto"></video><div class="wrap">
-<div><div class="eyebrow"><i></i>Балетно-драматический спектакль · 6+</div>
-<h1><span><b>Майя</b></span><span><b style="animation-delay:.15s">Великолепная</b></span></h1>
+<div><h1><span><b>Майя</b></span><span><b style="animation-delay:.15s">Великолепная</b></span></h1>
 <p class="lead">Спектакль-посвящение величайшей балерине XX века Майе Плисецкой. <strong>Автор постановки — Гедиминас Таранда.</strong></p>
-<div class="cta"><button class="btn" data-buy>Выбрать дату и купить билет →</button><a class="btn o" href="#about">О спектакле</a></div>
-<div class="facts"><div><b>24 окт — 5 дек</b>пятницы и субботы</div><div><b>19:00</b>начало</div><div><b>Кропоткинская</b>Галерея Ильи Глазунова</div></div></div>
-<div style="position:relative"><div class="arch" id="arch"><img src="assets/photo-01.jpg" alt="Майя Плисецкая"></div></div>
+<div class="cta"><a class="btn" data-buy href="https://icetickets.ru/meropriyatie/-baletno-dramaticheskiy-spektakl-mayya-velikolepnaya--000044326" target="_blank" rel="noopener noreferrer">Выбрать дату и купить билет →</a><a class="btn o" href="#about">О спектакле</a></div>
+<div class="facts"><div><b>24 окт — 5 дек</b>пятницы и субботы</div><div><b>19:00</b>начало</div><div><b>Галерея Ильи Глазунова</b>Волхонка&nbsp;13, метро Кропоткинская</div></div></div>
+<div style="position:relative"><div class="arch"><img src="assets/photo-01.jpg" width="633" height="1125" fetchpriority="high" alt="Майя Плисецкая"></div></div>
 </div></section>
 
 <div class="mq pane"><div><span>Балет</span>✦<span>Драма</span>✦<span>Музыка</span>✦<span>Поэзия</span>✦<span>Стиль</span>✦<span>Балет</span>✦<span>Драма</span>✦<span>Музыка</span>✦<span>Поэзия</span>✦<span>Стиль</span>✦<span>Балет</span>✦<span>Драма</span>✦<span>Музыка</span>✦<span>Поэзия</span>✦<span>Стиль</span>✦<span>Балет</span>✦<span>Драма</span>✦<span>Музыка</span>✦<span>Поэзия</span>✦<span>Стиль</span>✦</div></div>
@@ -137,68 +151,52 @@ footer{padding:80px 0 60px;border-top:1px solid var(--line);font-size:15px;color
 <p class="q rv">«Первым желанием моим было восстановить правду. Правду моей собственной жизни…»</p>
 <div class="two rv"><p>Её жизнь — это история силы духа, таланта и бесконечной любви к искусству. От репетиционного класса до мировых сцен, от строгих правил до абсолютной свободы танца.</p><p>Минималистичная сценография. Максимум чувств. Искренность, которая пробирает до мурашек. Вы будете не в зале — а внутри истории, на расстоянии вытянутой руки от артистов.</p></div></div></section>
 
-<section id="see"><div class="wrap"><h2 class="rv">Вы увидите</h2>
-<div class="see rv"><div class="sp"><div class="sa"><img class=on src="assets/photo-02.jpg" alt=""><img src="assets/photo-03.jpg" alt=""><img src="assets/photo-04.jpg" alt=""><img src="assets/photo-05.jpg" alt=""><img src="assets/photo-06.jpg" alt=""></div></div><div class="al"><div class="act on"><div class="h"><h3>Балет</h3></div><p>Величайшие хореографические образы</p></div><div class="act"><div class="h"><h3>Драма</h3></div><p>Театральные сцены из жизни Майи Плисецкой</p></div><div class="act"><div class="h"><h3>Музыка</h3></div><p>Шедевры Чайковского и Сен-Санса</p></div><div class="act"><div class="h"><h3>Поэзия</h3></div><p>Стихи Андрея Вознесенского</p></div><div class="act"><div class="h"><h3>Стиль</h3></div><p>От репетиционной формы до авангардных платьев Пьера Кардена</p></div></div></div></div></section>
-
 <section id="gal" class="pane" style="padding-bottom:70px"><div class="wrap"><h2 class="rv">Из зала</h2></div>
 <div class="rail">
-<figure><img src="assets/photo-07.jpg" alt=""></figure><figure><img src="assets/photo-08.jpg" alt=""></figure><figure><img src="assets/photo-09.jpg" alt=""></figure><figure><img src="assets/photo-10.jpg" alt=""></figure><figure><img src="assets/photo-11.jpg" alt=""></figure><figure><img src="assets/photo-07.jpg" alt=""></figure><figure><img src="assets/photo-12.jpg" alt=""></figure></div></section>
+<figure><img src="assets/photo-07.jpg" width="700" height="1050" loading="lazy" alt="Кадр из спектакля"></figure><figure><img src="assets/photo-08.jpg" width="900" height="599" loading="lazy" alt="Кадр из спектакля"></figure><figure><img src="assets/photo-09.jpg" width="800" height="664" loading="lazy" alt="Кадр из спектакля"></figure><figure><img src="assets/photo-10.jpg" width="900" height="599" loading="lazy" alt="Кадр из спектакля"></figure><figure><img src="assets/photo-11.jpg" width="900" height="599" loading="lazy" alt="Кадр из спектакля"></figure><figure><img src="assets/photo-07.jpg" width="700" height="1050" loading="lazy" alt="Кадр из спектакля"></figure><figure><img src="assets/photo-12.jpg" width="900" height="599" loading="lazy" alt="Кадр из спектакля"></figure></div></section>
 
 <section><div class="wrap"><h2 class="rv">Сокровища из личной коллекции Гедиминаса Таранды</h2>
-<div class="treas rv"><div class="ph" data-ph="c"><h3>Костюмы</h3><p>Костюмы Майи Плисецкой</p><span>Смотреть фото →</span></div><div class="ph" data-ph="p"><h3>Пуанты</h3><p>Балетные пачки и пуанты</p><span>Смотреть фото →</span></div><div class="ph" data-ph="e"><h3>Эскизы</h3><p>Эскизы и личные артефакты</p><span>Смотреть фото →</span></div></div></div></section>
+<div class="treas rv"><div class="ph" data-ph="c" tabindex="0" role="button"><h3>Костюмы</h3><p>Костюмы Майи Плисецкой</p><span>Смотреть фото →</span></div><div class="ph" data-ph="p" tabindex="0" role="button"><h3>Пуанты</h3><p>Балетные пачки и пуанты</p><span>Смотреть фото →</span></div><div class="ph" data-ph="e" tabindex="0" role="button"><h3>Эскизы</h3><p>Эскизы и личные артефакты</p><span>Смотреть фото →</span></div></div></div></section>
 
-<section class="pane"><div class="wrap ex"><img class="rv" src="assets/photo-13.jpg" alt="Выставка «На стыке веков»">
-<div class="rv"><h2 style="font-size:clamp(34px,4.4vw,62px)">Вечер начинается с выставки</h2><p style="color:var(--mut)">Вы увидите выставку «На стыке веков», посвящённую 100-летию Майи Плисецкой, и услышите личные истории, которые не найти в книгах. Слушать рассказы — отдельный подарок.</p>
-<div class="big">Галерея Ильи Глазунова<span style="font-size:15px;color:var(--mut)">с 8 октября по 21 ноября</span></div><button class="btn" data-buy>Хочу на спектакль →</button></div></div></section>
+<section class="pane"><div class="wrap ex"><img class="rv" src="assets/photo-13.jpg" width="1000" height="666" loading="lazy" alt="Выставка «На стыке веков»">
+<div class="rv"><span class="ey">Глава</span><h2>Вечер начинается с выставки</h2><p>«На стыке веков» — в честь завершения Юбилейного сезона, посвящённого 100-летию Майи Плисецкой.</p>
+<p><b>Куратор выставки — Юрий Мальцев</b>Искусствовед, коллекционер, Президент фонда «Дом Русского Балета»</p>
+<ul class="chips"><li>Живопись</li><li>Скульптура</li><li>Эскизы</li><li>Фотографии</li><li>Фарфор</li></ul>
+<h3>Уникальные костюмы из личной коллекции Гедиминаса Таранды</h3>
+<ul class="chips"><li>Костюмы</li><li>Буклеты</li><li>Афиши</li></ul>
+<p>Гримёрная комната балерины — где можно примерить балетные пачки, постоять в пуантах у балетного станка. И отдельный подарок&nbsp;— слушать истории от Гедиминаса Таранды.</p>
+<div class="big">Галерея Ильи Глазунова, Волхонка&nbsp;13, метро Кропоткинская<span>С 24 октября по 5 декабря</span></div><a class="btn" data-buy href="https://icetickets.ru/meropriyatie/-baletno-dramaticheskiy-spektakl-mayya-velikolepnaya--000044326" target="_blank" rel="noopener noreferrer">Хочу на спектакль →</a></div></div></section>
 
 <section><div class="wrap"><h2 class="rv">Кто создаёт эту магию</h2>
-<div class="team rv"><div class="gm"><span class="n">Гедиминас Таранда</span><span class="r">Автор постановки</span><img src="assets/photo-14.jpg" alt="Гедиминас Таранда"></div><div class="lst"><div>«Имперский Русский Балет»</div><div>Драматические актёры</div><div>Академия балета Гедиминаса Таранды</div></div></div></div></section>
+<div class="team rv"><div class="gm"><span class="ey">Легенда Большого театра</span><span class="n">Гедиминас Таранда</span><span class="r">Режиссёр-постановщик</span><img src="assets/photo-14.jpg" width="900" height="510" loading="lazy" alt="Гедиминас Таранда"></div><div class="lst"><div>«Имперский Русский Балет»</div><div>Драматические актёры</div><div>Академия балета Гедиминаса Таранды</div></div></div></div></section>
 
-<section id="vid"><div class="wrap vd"><div class="rv"><h2>Почувствуйте вечер</h2><p>Несколько секунд из мира спектакля — и вы уже там. Остаётся выбрать дату.</p><button class="btn" data-buy>Выбрать дату →</button></div><div class="vf rv"><video id="v2" src="assets/evening-video.mp4" poster="assets/photo-15.jpg" muted loop playsinline preload="metadata"></video><button class="snd" id="snd">Включить звук</button></div></div></section>
-<section id="rev" class="pane" style="padding-bottom:40px"><div class="wrap"><h2 class="rv">Отзывы зрителей</h2><div class="rvs rv"><div class="rw"><span class="s">★★★★★</span><p>Не ожидала, что так сильно зацепит. Артисты в двух шагах, и каждая сцена как личное письмо. После экскурсии по выставке смотришь спектакль совсем другими глазами.</p><div class="who"><i>Е</i><div>Елена Миронова</div></div></div><div class="rw"><span class="s">★★★★★</span><p>Были с женой на Премиум: просекко и сыры к месту, но главное — постановка. Стихи Вознесенского под музыку Чайковского — отдельная радость.</p><div class="who"><i>А</i><div>Андрей Ковалёв</div></div></div><div class="rw"><span class="s">★★★★★</span><p>Водила дочь, ей десять. Не отрывалась ни на минуту, а потом ещё неделю репетировала дома. Спасибо за такую живую историю.</p><div class="who"><i>Н</i><div>Наталья Рубцова</div></div></div><div class="rw"><span class="s">★★★★★</span><p>Минимум декораций, максимум чувств — именно так. Костюмы и пуанты в экспозиции разглядывала бы часами.</p><div class="who"><i>М</i><div>Мария Светлова</div></div></div><div class="rw"><span class="s">★★★★★</span><p>Я далёк от балета, но ушёл под сильным впечатлением. Драматические сцены держат так, что забываешь, что находишься в галерее.</p><div class="who"><i>И</i><div>Игорь Данилов</div></div></div><div class="rw"><span class="s">★★★★★</span><p>Очень камерно и очень честно. Места лучше брать заранее — зал небольшой, и вечера разлетаются.</p><div class="who"><i>О</i><div>Ольга Белова</div></div></div></div></div></section>
+<section id="vid"><div class="wrap vd"><div class="rv"><h2>Почувствуйте вечер</h2><p>Несколько минут из мира спектакля — и вы уже там. Остаётся выбрать дату.</p><a class="btn" data-buy href="https://icetickets.ru/meropriyatie/-baletno-dramaticheskiy-spektakl-mayya-velikolepnaya--000044326" target="_blank" rel="noopener noreferrer">Выбрать дату →</a></div><div class="vf rv"><video id="v2" src="assets/evening-video.mp4" poster="assets/evening-poster.jpg" width="720" height="1280" muted loop playsinline preload="metadata"></video><button class="snd" id="snd">Включить звук</button></div></div></section>
+<section id="rev" class="pane" style="padding-bottom:40px"><div class="wrap"><h2 class="rv">Отзывы зрителей</h2><div class="rvs rv"><div class="rw"><span class="s">★★★★★</span><p>Не ожидала, что так сильно зацепит. Артисты в двух шагах, и каждая сцена как личное письмо. После экскурсии по выставке смотришь спектакль совсем другими глазами.</p><div class="who"><i>Е</i><div>Елена Вебер</div></div></div><div class="rw"><span class="s">★★★★★</span><p>Были с женой на Премиум: просекко и сыры к месту, но главное — постановка. Стихи Вознесенского под музыку Чайковского — отдельная радость.</p><div class="who"><i>А</i><div>Андрей Петросян</div></div></div><div class="rw"><span class="s">★★★★★</span><p>Водила дочь, ей десять. Не отрывалась ни на минуту, а потом ещё неделю репетировала дома. Спасибо за такую живую историю.</p><div class="who"><i>Н</i><div>Наталья Коэн</div></div></div><div class="rw"><span class="s">★★★★★</span><p>Минимум декораций, максимум чувств — именно так. Костюмы и пуанты в экспозиции разглядывала бы часами.</p><div class="who"><i>М</i><div>Мария Мартен</div></div></div><div class="rw"><span class="s">★★★★★</span><p>Я далёк от балета, но ушёл под сильным впечатлением. Драматические сцены держат так, что забываешь, что находишься в галерее.</p><div class="who"><i>И</i><div>Игорь Ким</div></div></div><div class="rw"><span class="s">★★★★★</span><p>Очень камерно и очень честно. Места лучше брать заранее — зал небольшой, и вечера разлетаются.</p><div class="who"><i>О</i><div>Ольга Росси</div></div></div></div></div></section>
 <section id="dates" class="pane"><div class="wrap"><h2 class="rv">Выберите вечер</h2><div id="rows"></div></div></section>
 
-<section id="price"><div class="wrap"><h2 class="rv">Билеты</h2>
+<section id="price"><div class="wrap"><h2 class="rv">Билеты</h2><p class="pl rv">От 2&nbsp;500&nbsp;₽ до 5&nbsp;000&nbsp;₽</p>
 <div class="pr rv">
-<div class="pc"><span class="m">Детский</span><span class="p">2 500 ₽</span><span class="m">Для маленьких зрителей</span><button class="btn o" data-buy>Выбрать</button></div>
-<div class="pc"><span class="m">Взрослый</span><span class="p">4 000 ₽</span><span class="m">Спектакль и экскурсия по выставке</span><button class="btn o" data-buy>Выбрать</button></div>
-<div class="pc pm"><span class="m">Премиум</span><span class="p">5 500 ₽</span><ul><li>Бокал просекко</li><li>Сырная тарелка</li><li>Авторский кофе</li></ul><button class="btn" style="background:var(--invt);color:var(--inv)" data-buy>Выбрать</button></div></div></div></section>
+<div class="pc"><h3>Детский</h3><span class="m">Для маленьких зрителей</span><a class="btn o" data-buy href="https://icetickets.ru/meropriyatie/-baletno-dramaticheskiy-spektakl-mayya-velikolepnaya--000044326" target="_blank" rel="noopener noreferrer" aria-label="Купить детский билет">Купить</a></div>
+<div class="pc"><h3>Взрослый</h3><span class="m">Спектакль и экскурсия по выставке</span><a class="btn o" data-buy href="https://icetickets.ru/meropriyatie/-baletno-dramaticheskiy-spektakl-mayya-velikolepnaya--000044326" target="_blank" rel="noopener noreferrer" aria-label="Купить взрослый билет">Купить</a></div>
+<div class="pc pm"><h3>Премиум</h3><span class="m">Всего 6 столиков</span><ul><li>Бокал игристого</li><li>Сырная тарелка</li><li>Кофе</li></ul><a class="btn" style="background:var(--invt);color:var(--inv)" data-buy href="https://icetickets.ru/meropriyatie/-baletno-dramaticheskiy-spektakl-mayya-velikolepnaya--000044326" target="_blank" rel="noopener noreferrer" aria-label="Купить премиум билет">Купить</a></div></div></div></section>
 </main>
 
-<footer class="pane"><div class="wrap"><div><b class="serif" style="font-size:26px">Майя Великолепная</b>Балетно-драматический спектакль · 6+</div><div><b>Место</b>Галерея Ильи Глазунова<br>Москва, ул. Волхонка, 13<br>м. Кропоткинская</div><div><b>Билеты</b>+7 903 11 060 11<br>Каждую пятницу и субботу, 19:00</div></div></footer>
-<div class="bar"><button class="btn" data-buy>Купить билет</button></div>
+<footer class="pane"><div class="wrap"><div><b class="serif" style="font-size:26px">Майя Великолепная</b>Балетно-драматический спектакль · 6+</div><div><b>Место</b>Галерея Ильи Глазунова, Волхонка&nbsp;13, метро Кропоткинская</div><div><b>Билеты</b><a href="tel:+79031106011">+7 903 11 060 11</a><br>Каждую пятницу и субботу, 19:00</div><div><b>Билеты по QR-коду</b><a class="qr" href="https://icetickets.ru/meropriyatie/-baletno-dramaticheskiy-spektakl-mayya-velikolepnaya--000044326" target="_blank" rel="noopener noreferrer" aria-label="Купить билеты по QR-коду"><img src="assets/qr-tickets.png" width="180" height="180" alt="QR-код для покупки билетов на сайте icetickets.ru" loading="lazy"></a><small>Наведите камеру телефона</small></div></div></footer>
+<div class="bar"><a class="btn" data-buy href="https://icetickets.ru/meropriyatie/-baletno-dramaticheskiy-spektakl-mayya-velikolepnaya--000044326" target="_blank" rel="noopener noreferrer">Купить билет</a></div>
 
-<div id="modal"><div class="box"><button class="x" id="cl">×</button><div id="f1"><h3>Ваш вечер</h3><p class="sub">Галерея Ильи Глазунова · начало в 19:00</p>
-<select id="sel"></select><div id="tks"></div><div class="tot"><span>Итого</span><b id="tot">0 ₽</b></div>
-<input id="nm" placeholder="Имя"><input id="ph" type="tel" placeholder="Телефон"><button class="btn" id="go" style="width:100%;justify-content:center">Оформить заказ</button></div>
-<div id="f2" style="display:none"><h3>Заявка принята</h3><p class="sub" id="ok"></p><button class="btn o" id="cl2">Закрыть</button></div></div></div>
-
-<div id="lb"><img id="lbi" alt=""></div>
+<div id="lb"><img id="lbi" alt="Фото из коллекции"></div>
 <script>
 const $=s=>document.querySelector(s),M=['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'],W=['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'];
 const D=[[9,'out'],[10,'low'],[16,'out'],[17,''],[24,''],[31,'low'],[37,''],[44,''],[51,'']].map(([n,s])=>{const d=new Date(2026,9,n<=21?n:n-21+31>31?n:n);return{n,s}});
-const days=[];[['2026-10-24',''],['2026-10-30','out'],['2026-10-31','low'],['2026-11-07',''],['2026-11-14',''],['2026-11-20','out'],['2026-11-21','low'],['2026-11-28',''],['2026-12-05','low']].forEach(([iso,s])=>{const d=new Date(iso+'T19:00:00');days.push({iso,s,d})});
-const lab=d=>d.getDate()+' '+M[d.getMonth()];
-$('#rows').innerHTML=days.map((x,i)=>`<div class="row rv ${x.s}"><div class="d">${x.d.getDate()}</div><div class="w">${M[x.d.getMonth()]}<small>${W[x.d.getDay()]}</small></div><div class="t">19:00</div><div class="st ${x.s}">${x.s=='out'?'Аншлаг — билетов нет':x.s=='low'?'Осталось мало мест':'Есть места'}</div>${x.s=='out'?'<button class="btn sm" disabled>Sold out</button>':`<button class="btn sm" data-buy data-i="${i}">Купить</button>`}</div>`).join('');
-$('#sel').innerHTML=days.map((x,i)=>`<option value="${i}" ${x.s=='out'?'disabled':''}>${lab(x.d)}, ${W[x.d.getDay()]}, 19:00${x.s=='out'?' — sold out':''}</option>`).join('');
-const T=[['Детский','Для маленьких зрителей',2500],['Взрослый','Спектакль и экскурсия',4000],['Премиум','Просекко, сырная тарелка, авторский кофе',5500]],q=[0,0,0];
-function calc(){$('#tot').textContent=T.reduce((s,t,i)=>s+t[2]*q[i],0).toLocaleString('ru-RU').replace(/\u00a0/g,' ')+' ₽'}
-$('#tks').innerHTML=T.map((t,i)=>`<div class="tk"><div>${t[0]} · ${t[2].toLocaleString('ru-RU')} ₽<small>${t[1]}</small></div><div class="ct"><button data-m="${i}">−</button><span id="q${i}">0</span><button data-p="${i}">+</button></div></div>`).join('');
-$('#tks').onclick=e=>{const m=e.target.dataset.m,p=e.target.dataset.p,i=m??p;if(i==null)return;q[i]=Math.max(0,Math.min(10,q[i]+(p!=null?1:-1)));$('#q'+i).textContent=q[i];calc()};
-const open=i=>{$('#f1').style.display='';$('#f2').style.display='none';if(i!=null)$('#sel').value=i;else if(days[$('#sel').value].s=='out')$('#sel').value=days.findIndex(x=>x.s!='out');if(!q.some(Boolean)){q[1]=1;$('#q1').textContent=1;calc()}$('#modal').classList.add('on')};
-document.addEventListener('click',e=>{const b=e.target.closest('[data-buy]');if(b){e.preventDefault();open(b.dataset.i)}});
-const cl=()=>$('#modal').classList.remove('on');$('#cl').onclick=cl;$('#cl2').onclick=cl;$('#modal').onclick=e=>{if(e.target.id=='modal')cl()};
-$('#go').onclick=()=>{if(!$('#nm').value||!$('#ph').value){$('#nm').focus();return}const x=days[$('#sel').value];$('#ok').textContent=`${$('#nm').value}, мы забронировали места на ${lab(x.d)} в 19:00. Сумма: ${$('#tot').textContent}. Менеджер свяжется с вами по телефону.`;$('#f1').style.display='none';$('#f2').style.display=''};
+const days=[];[['2026-10-24',''],['2026-10-31','low'],['2026-11-07',''],['2026-11-14',''],['2026-11-21','low'],['2026-11-28',''],['2026-12-05','low']].forEach(([iso,s])=>{const d=new Date(iso+'T19:00:00');days.push({iso,s,d})});
+$('#rows').innerHTML=days.map(x=>`<div class="row rv"><div class="d">${x.d.getDate()}</div><div class="w">${M[x.d.getMonth()]}<small>${W[x.d.getDay()]}</small></div><div class="t">19:00</div><div class="st ${x.s}">${x.s=='low'?'Осталось мало мест':'Есть места'}</div><a class="btn sm" data-buy href="https://icetickets.ru/meropriyatie/-baletno-dramaticheskiy-spektakl-mayya-velikolepnaya--000044326" target="_blank" rel="noopener noreferrer" aria-label="Купить билет на ${x.d.getDate()} ${M[x.d.getMonth()]}">Купить</a></div>`).join('');
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 addEventListener('scroll',()=>$('#hd').classList.toggle('s',scrollY>40),{passive:true});
 const v=$('#bg');v.playbackRate=.8;v.play().catch(()=>{});addEventListener('pointerdown',()=>v.play().catch(()=>{}),{once:true});
-const a=$('#arch');addEventListener('pointermove',e=>{$('#cur').style.transform=`translate(${e.clientX}px,${e.clientY}px)`;const r=a.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;if(Math.abs(x)<1.5&&Math.abs(y)<1.5)a.style.transform=`perspective(900px) rotateY(${x*8}deg) rotateX(${-y*8}deg)`});
+const cur=$('#cur');if(matchMedia('(pointer:fine)').matches)addEventListener('pointermove',e=>{cur.style.opacity=1;cur.style.transform=`translate(${e.clientX}px,${e.clientY}px)`},{passive:true});
 const P={c:'assets/photo-16.jpg',p:'assets/photo-17.jpg',e:'assets/photo-18.jpg'};
-document.querySelectorAll('[data-ph]').forEach(el=>el.onclick=()=>{$('#lbi').src=P[el.dataset.ph];$('#lb').classList.add('on')});
-$('#lb').onclick=()=>$('#lb').classList.remove('on');addEventListener('keydown',e=>{if(e.key=='Escape'){$('#lb').classList.remove('on');cl()}});
-const acts=[...document.querySelectorAll('.act')],sim=[...document.querySelectorAll('.sa img')];let ai=0,at;
-function setA(i){ai=i;acts.forEach((a,k)=>a.classList.toggle('on',k==i));sim.forEach((m,k)=>m.classList.toggle('on',k==i));clearInterval(at);at=setInterval(()=>setA((ai+1)%acts.length),5000)}
-acts.forEach((a,k)=>{a.onmouseenter=()=>{if(k!=ai)setA(k)};a.onclick=()=>{if(k!=ai)setA(k)}});setA(0);
+document.querySelectorAll('[data-ph]').forEach(el=>{el.onclick=()=>{$('#lbi').src=P[el.dataset.ph];$('#lb').classList.add('on')};el.onkeydown=e=>{if(e.key=='Enter'||e.key==' '){e.preventDefault();el.click()}}});
+$('#lb').onclick=()=>$('#lb').classList.remove('on');addEventListener('keydown',e=>{if(e.key=='Escape')$('#lb').classList.remove('on')});
 const v2=$('#v2'),sb=$('#snd');
 new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting?v2.play().catch(()=>{}):v2.pause()),{threshold:.35}).observe(v2);
 sb.onclick=()=>{v2.muted=!v2.muted;sb.textContent=v2.muted?'Включить звук':'Выключить звук';v2.play().catch(()=>{})};
