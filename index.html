@@ -12,20 +12,13 @@
 <title>Майя Великолепная — спектакль о Майе Плисецкой в Москве</title>
 <link rel="icon" href="assets/photo-01.jpg" type="image/jpeg">
 <script defer src="site.js"></script>
+<script defer src="analytics.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prata&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
 <style>
-:root{--bg:#ecebe9;--pane:rgba(247,246,244,.6);--sko:.09;--ink:#16161a;--mut:#65656c;--line:rgba(22,22,26,.16);--card:rgba(255,255,255,.7);--inv:#16161a;--invt:#f4f3f1;--red:#8d2b35;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1a1d;--pane:rgba(29,29,32,.6);--sko:.12;--ink:#efeeec;--mut:#9a9aa2;--line:rgba(239,238,236,.18);--card:rgba(255,255,255,.05);--inv:#efeeec;--invt:#16161a}}
-:root[data-theme="dark"]{--bg:#1a1a1d;--pane:rgba(29,29,32,.6);--sko:.12;--ink:#efeeec;--mut:#9a9aa2;--line:rgba(239,238,236,.18);--card:rgba(255,255,255,.05);--inv:#efeeec;--invt:#16161a}
 html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));scroll-padding-bottom:84px;background:var(--bg)}
-*{box-sizing:border-box;margin:0}
-body{background:transparent;color:var(--ink);font:300 17px/1.65 Jost,system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-h1,h2,h3,.serif{font-family:Prata,Georgia,serif;font-weight:400;line-height:1.05}
-h1,h2,h3,.q{text-wrap:balance}p{text-wrap:pretty}
-img{display:block;max-width:100%}
-small,.facts,nav a,footer,{font-weight:400}
-:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.q{text-wrap:balance}
 #bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;filter:grayscale(1) contrast(.9);opacity:.16}
 #hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,transparent 60%,var(--bg))}
 .team{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
@@ -36,25 +29,16 @@ small,.facts,nav a,footer,{font-weight:400}
 .vd p{color:var(--mut);font-size:19px;max-width:420px;margin:-20px 0 32px}
 .vf{position:relative;height:min(78vh,700px);aspect-ratio:9/16;border-radius:30px;overflow:hidden;box-shadow:0 60px 110px -50px rgba(0,0,0,.6)}
 .vf video{width:100%;height:100%;object-fit:cover;display:block}
-.wrap{max-width:1240px;margin:auto;padding:0 28px}
 section{padding:120px 0;position:relative}
-.pane{background:var(--pane)}
 header{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;transition:.4s}
 header.s{background:var(--pane);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo{white-space:nowrap;font-family:Prata,serif;font-size:24px;letter-spacing:.04em;text-decoration:none;color:var(--ink)}
 nav{display:flex;gap:30px;align-items:center}nav a:not(.btn){color:var(--ink);text-decoration:none;font-size:14px;opacity:.7;transition:.3s}nav a:not(.btn):hover{opacity:1}
-.btn{display:inline-flex;align-items:center;gap:12px;background:var(--inv);color:var(--invt);border:0;border-radius:99px;padding:16px 30px;font:400 15px Jost,sans-serif;cursor:pointer;text-decoration:none;transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
-.btn:hover{box-shadow:0 14px 40px -12px rgba(0,0,0,.5)}
-.btn.o{background:transparent;color:var(--ink);border:1px solid var(--ink)}
-.btn.sm{padding:11px 22px;font-size:14px}
-.btn.sm{min-height:44px}
 #hero{overflow:hidden;isolation:isolate;min-height:100vh;display:flex;align-items:center;padding:130px 0 80px}
 #hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:50px;align-items:center}
 h1{font-size:clamp(54px,7.1vw,98px);letter-spacing:-.035em}
 h1 span{display:block}
 .lead{max-width:470px;margin:26px 0 18px;font-size:19px;color:var(--mut)}.lead strong{color:var(--ink);font-weight:400}
-.cta{display:flex;gap:14px;flex-wrap:wrap}
 .arch{aspect-ratio:3/4.3;position:relative;overflow:hidden}
 .arch img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);object-position:50% 0;transform-origin:50% 0;animation:z 18s ease-in-out infinite alternate}
 @keyframes z{to{transform:scale(1.05)}}
@@ -92,13 +76,9 @@ footer{padding:80px 0 60px;border-top:1px solid var(--line);font-size:15px;color
 #sk svg:nth-child(5){--s:clamp(140px,14vw,220px);--t:39s;--d:-25s;bottom:3vh;left:16vw;rotate:170deg}
 #sk svg:nth-child(6){--s:clamp(170px,20vw,300px);--t:29s;--d:-14s;bottom:-3vh;right:10vw;rotate:-10deg;scale:-1 1}
 
-[hidden]{display:none!important}
-.sr-only,.skip-link:not(:focus){position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-.skip-link:focus{position:fixed;top:12px;left:12px;z-index:150;background:var(--inv);color:var(--invt);padding:10px 18px}
 header{background:var(--bg)}
 nav a:not(.btn){opacity:1;min-height:44px;display:inline-flex;align-items:center}
 nav a:not(.btn):hover,footer a:hover{text-decoration:underline;text-underline-offset:4px}
-.btn{min-height:44px;justify-content:center;text-align:center;line-height:1.35}
 .venue{font-weight:400;color:var(--mut);margin-bottom:18px}.venue strong{color:var(--ink)}
 .next-show{color:var(--ink);font-weight:400;margin-bottom:18px;min-height:1.65em}
 .next-show span{margin-right:.45em}
@@ -106,16 +86,17 @@ nav a:not(.btn):hover,footer a:hover{text-decoration:underline;text-underline-of
 .next-show time{white-space:nowrap;font-weight:500}
 .motion-control{position:absolute;right:28px;bottom:22px;min-height:44px;padding:8px 14px;border:1px solid var(--line);border-radius:99px;background:var(--bg);color:var(--ink);font:inherit;font-size:14px;cursor:pointer}
 #dates,#corporate{padding:80px 0}
-#dates h2,.corporate h2{margin-bottom:22px}
+#dates h2,.corporate-teaser h2{margin-bottom:22px}
 #ticket-price{font-weight:500;margin-bottom:8px}
-#schedule-note,.corporate p:not(.ey){color:var(--mut);font-size:18px}
+#schedule-note,.corporate-teaser p{color:var(--mut);font-size:18px}
 #rows{margin-top:18px;border-top:1px solid var(--line)}
 .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
 .row time{display:grid;gap:3px}.row time strong{font:400 clamp(22px,3vw,34px) Prata,Georgia,serif}
 .row time span{color:var(--mut);font-size:15px;font-weight:400}
-.schedule-link{margin-top:22px}.corporate{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:52px}
-.corporate h2{font-size:clamp(34px,4.5vw,60px);margin:0}
-.corporate .cta{margin-top:22px;gap:10px}.corporate .btn{padding:12px 22px}
+.schedule-link{margin-top:22px}
+.corporate-teaser{display:grid;grid-template-columns:1fr auto;align-items:center;gap:32px}
+.corporate-teaser h2{font-size:clamp(32px,4.2vw,54px);margin-bottom:12px}
+.corporate-teaser .btn{justify-self:start}
 .treas .ph{display:flex;min-height:128px;flex-direction:column;justify-content:center;gap:9px;border:1px solid var(--line);border-radius:18px;padding:22px 24px;background:var(--card);color:var(--ink);text-decoration:none}
 .ph strong{font:400 22px Prata,Georgia,serif}.ph span{color:var(--mut);font-size:15px}
 .ph:hover strong{text-decoration:underline;text-underline-offset:5px}
@@ -131,8 +112,7 @@ footer a{color:var(--ink)}.footer-title{font-size:26px}
   #sk svg:nth-child(n+5),nav a.nav-secondary{display:none}
   .logo{font-size:clamp(14px,3.8vw,19px);white-space:normal}
   nav{gap:12px;flex-shrink:0}header .wrap{gap:12px;height:64px}
-  .wrap{padding-inline:20px}
-  .vd,.two,.ex,footer .wrap,.treas,.team,.corporate{grid-template-columns:1fr;gap:24px}
+  .vd,.two,.ex,footer .wrap,.treas,.team,.corporate-teaser{grid-template-columns:1fr;gap:24px}
   .vf{height:auto;width:min(100%,340px);margin:auto}
   section,#dates,#corporate{padding:52px 0}
   #hero{min-height:auto;padding:95px 0 32px}
@@ -141,14 +121,13 @@ footer a{color:var(--ink)}.footer-title{font-size:26px}
   h2{margin-bottom:28px}
   .lead{margin:16px 0 12px;font-size:17px}
   .venue,.next-show{font-size:15px;margin-bottom:12px}
-  .cta{gap:9px}.cta .btn{padding:11px 17px}
   .arch{width:min(44vw,230px);aspect-ratio:4/4.1;justify-self:center}
   .vd p{margin:0}
   .bar{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:40}
   .bar .btn{width:100%;background:#8d2b35;color:#fff;padding-block:12px}
   footer{padding:48px 0 calc(84px + env(safe-area-inset-bottom,0px))}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.rail img{transition:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rail img{transition:none}}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
 <symbol id="sk-fan" viewBox="0 0 200 200">
@@ -173,7 +152,7 @@ footer a{color:var(--ink)}.footer-title{font-size:26px}
   <nav aria-label="Основное меню">
     <a class="nav-secondary" href="#about">О спектакле</a>
     <a class="nav-secondary" href="#gal">Галерея</a>
-    <a href="#corporate">Для компаний</a>
+    <a href="corporate/">Для компаний</a>
     <a class="btn sm nav-secondary" href="#dates">Афиша</a>
   </nav>
 </div></header>
@@ -189,7 +168,7 @@ footer a{color:var(--ink)}.footer-title{font-size:26px}
       <p class="next-show" id="next-show"><span>Актуальные даты в IceTickets</span> <time hidden></time></p>
       <div class="cta">
         <a class="btn" id="show-cta" href="#dates">Выбрать дату</a>
-        <a class="btn o" href="#corporate">Для компаний</a>
+        <a class="btn o" href="corporate/">Для компаний</a>
       </div>
     </div>
     <div class="arch"><img src="assets/photo-01.jpg" width="633" height="1125" fetchpriority="high" alt="Майя Плисецкая"></div>
@@ -220,20 +199,13 @@ footer a{color:var(--ink)}.footer-title{font-size:26px}
   </div>
 </section>
 
-<section id="corporate">
-  <div class="wrap corporate">
+<section id="corporate" aria-labelledby="corporate-teaser-title">
+  <div class="wrap corporate-teaser">
     <div>
-      <p class="ey">Для компаний</p>
-      <h2>Групповые посещения и закрытые показы</h2>
+      <h2 id="corporate-teaser-title">Для компаний</h2>
+      <p>Групповые посещения спектакля и закрытые показы для команд и гостей.</p>
     </div>
-    <div>
-      <p>Планируете вечер для команды, партнёров или гостей? Обсудим групповой визит на спектакль или отдельный показ. Расскажите, сколько гостей вы ждёте и на какую дату ориентируетесь.</p>
-      <div class="cta">
-        <a class="btn" data-corporate="telegram" href="https://t.me/Ekaterina_Churkina" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
-        <a class="btn o" data-corporate="phone" href="tel:+79859230996">Позвонить</a>
-        <a class="btn o" data-corporate="email" href="mailto:tarandadenis15@gmail.com?subject=%D0%9C%D0%B0%D0%B9%D1%8F%20%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D0%BB%D0%B5%D0%BF%D0%BD%D0%B0%D1%8F%20%E2%80%94%20%D0%B4%D0%BB%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D0%B9">Написать на почту</a>
-      </div>
-    </div>
+    <a class="btn o" href="corporate/">Форматы для компаний</a>
   </div>
 </section>
 
@@ -279,7 +251,7 @@ footer a{color:var(--ink)}.footer-title{font-size:26px}
   <div class="wrap">
     <div><b class="serif footer-title">Майя Великолепная</b>Балетно-драматический спектакль · 6+</div>
     <div><b>Место</b>Галерея Ильи Глазунова, Волхонка&nbsp;13, метро Кропоткинская</div>
-    <div><b>Билеты</b><a href="tel:+79031106011">+7 903 11 060 11</a><br><a href="#corporate">Для компаний</a></div>
+    <div><b>Билеты</b><a href="tel:+79031106011">+7 903 11 060 11</a><br><a href="corporate/">Для компаний</a></div>
     <div><b>Афиша в IceTickets</b><a class="qr" data-buy href="https://icetickets.ru/meropriyatie/-baletno-dramaticheskiy-spektakl-mayya-velikolepnaya--000044326" target="_blank" rel="noopener noreferrer" aria-label="Открыть афишу в IceTickets"><img src="assets/qr-tickets.png" width="180" height="180" alt="QR-код афиши в IceTickets" loading="lazy"></a></div>
   </div>
 </footer>

@@ -81,38 +81,57 @@ def main():
     if destination.exists():
         parser.error('папка назначения уже существует')
     try:
-        markup = (ROOT / 'index.html').read_text(encoding='utf-8')
-        if markup.count(ROBOTS) != 1:
-            raise ValueError('ожидался один исходный noindex meta-тег')
-        if re.search(r'<(?:link\s+rel="canonical"|meta\s+(?:property="og:(?:url|image)|name="(?:twitter:card|metrika-id)))', markup, re.I):
-            raise ValueError('SEO или Метрика уже добавлены в исходник; проверьте шаблон')
-        if markup.count(PRICE) != 1:
-            raise ValueError('не найдена единственная скрытая строка цены')
-        if args.from_price:
-            amount = f'{args.from_price:,}'.replace(',', '\u00a0')
-            markup = markup.replace(PRICE, f'<p id="ticket-price">Билеты от {amount}\u00a0₽</p>')
         origin = html.escape(args.origin, quote=True)
-        tags = [f'<link rel="canonical" href="{origin}/">',
-                f'<meta property="og:url" content="{origin}/">',
-                f'<meta property="og:image" content="{origin}/assets/photo-08.jpg">',
-                '<meta property="og:image:width" content="900">',
-                '<meta property="og:image:height" content="599">',
-                '<meta property="og:image:alt" content="Спектакль «Майя Великолепная»">',
-                '<meta name="twitter:card" content="summary_large_image">']
-        if args.metrika_id:
-            markup = add_metrika_csp(markup)
-            tags.append(f'<meta name="metrika-id" content="{args.metrika_id}">')
-        markup = markup.replace(ROBOTS, '\n'.join(tags))
-        for source in (ROOT / 'site.js', ROOT / 'assets' / 'photo-08.jpg'):
-            if not source.is_file():
-                raise ValueError('отсутствует файл: ' + str(source))
+        routes = (
+            ('index.html', '/', 'photo-08.jpg'),
+            ('corporate/index.html', '/corporate/', 'photo-10.jpg'),
+        )
+        pages = {}
+        for path, url_path, image in routes:
+            markup = (ROOT / path).read_text(encoding='utf-8')
+            if markup.count(ROBOTS) != 1:
+                raise ValueError('ожидался один исходный noindex meta-тег: ' + path)
+            if re.search(r'<(?:link\s+rel="canonical"|meta\s+(?:property="og:(?:url|image)|name="(?:twitter:card|metrika-id)))', markup, re.I):
+                raise ValueError('SEO или Метрика уже добавлены в исходник; проверьте шаблон')
+            if path == 'index.html':
+                if markup.count(PRICE) != 1:
+                    raise ValueError('не найдена единственная скрытая строка цены')
+                if args.from_price:
+                    amount = f'{args.from_price:,}'.replace(',', '\u00a0')
+                    markup = markup.replace(PRICE, f'<p id="ticket-price">Билеты от {amount}\u00a0₽</p>')
+            tags = [f'<link rel="canonical" href="{origin}{url_path}">',
+                    f'<meta property="og:url" content="{origin}{url_path}">',
+                    f'<meta property="og:image" content="{origin}/assets/{image}">',
+                    '<meta property="og:image:width" content="900">',
+                    '<meta property="og:image:height" content="599">',
+                    '<meta property="og:image:alt" content="Спектакль «Майя Великолепная»">',
+                    '<meta name="twitter:card" content="summary_large_image">']
+            if args.metrika_id:
+                markup = add_metrika_csp(markup)
+                tags.append(f'<meta name="metrika-id" content="{args.metrika_id}">')
+            pages[path] = markup.replace(ROBOTS, '\n'.join(tags))
+        static_files = ('site.js', 'analytics.js', 'shared.css', 'corporate/corporate.css')
+        required = (*static_files, *(f'assets/{image}' for _, _, image in routes))
+        for path in required:
+            if not (ROOT / path).is_file():
+                raise ValueError('отсутствует файл: ' + str(ROOT / path))
         destination.mkdir(parents=True, exist_ok=False)
         try:
-            (destination / 'index.html').write_text(markup, encoding='utf-8')
-            shutil.copy2(ROOT / 'site.js', destination / 'site.js')
+            (destination / 'corporate').mkdir()
+            for path, markup in pages.items():
+                (destination / path).write_text(markup, encoding='utf-8')
+            for path in static_files:
+                shutil.copy2(ROOT / path, destination / path)
             shutil.copytree(ROOT / 'assets', destination / 'assets')
             (destination / 'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {args.origin}/sitemap.xml\n', encoding='utf-8')
-            (destination / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>' + escape(args.origin + '/') + '</loc></url></urlset>\n', encoding='utf-8')
+            locations = ''.join(
+                '<url><loc>' + escape(args.origin + url_path) + '</loc></url>'
+                for _, url_path, _ in routes
+            )
+            (destination / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + locations + '</urlset>\n', encoding='utf-8')
+            for path in (*pages, *required, 'robots.txt', 'sitemap.xml'):
+                if not (destination / path).is_file():
+                    raise ValueError('отсутствует файл релиза: ' + path)
         except Exception:
             shutil.rmtree(destination)
             raise
