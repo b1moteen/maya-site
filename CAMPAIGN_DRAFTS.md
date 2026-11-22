@@ -26,6 +26,31 @@
 
 Для других партнёров создать отдельный `utm_source`. Если сайт недоступен, использовать прямую ссылку кассы из афиши и учитывать, что Метрика сайта такой переход не увидит.
 
+## Готовые ссылки на декабрьские показы
+
+У каждой пары первая ссылка предназначена для анонса, вторая — для напоминания. Перед каждым размещением проверить наличие мест.
+
+| Показ и канал | Анонс | Напоминание |
+|---|---|---|
+| 5 декабря, Telegram организатора | [Анонс](https://www.maya-velikolepnaya.ru/?utm_source=organizer_tg&utm_medium=organic_social&utm_campaign=maya_2026_12_05&utm_content=announce) | [Напоминание](https://www.maya-velikolepnaya.ru/?utm_source=organizer_tg&utm_medium=organic_social&utm_campaign=maya_2026_12_05&utm_content=reminder) |
+| 5 декабря, VK организатора | [Анонс](https://www.maya-velikolepnaya.ru/?utm_source=organizer_vk&utm_medium=organic_social&utm_campaign=maya_2026_12_05&utm_content=announce) | [Напоминание](https://www.maya-velikolepnaya.ru/?utm_source=organizer_vk&utm_medium=organic_social&utm_campaign=maya_2026_12_05&utm_content=reminder) |
+| 5 декабря, Telegram галереи | [Анонс](https://www.maya-velikolepnaya.ru/?utm_source=gallery_tg&utm_medium=referral&utm_campaign=maya_2026_12_05&utm_content=announce) | [Напоминание](https://www.maya-velikolepnaya.ru/?utm_source=gallery_tg&utm_medium=referral&utm_campaign=maya_2026_12_05&utm_content=reminder) |
+| 12 декабря, Telegram организатора | [Анонс](https://www.maya-velikolepnaya.ru/?utm_source=organizer_tg&utm_medium=organic_social&utm_campaign=maya_2026_12_12&utm_content=announce) | [Напоминание](https://www.maya-velikolepnaya.ru/?utm_source=organizer_tg&utm_medium=organic_social&utm_campaign=maya_2026_12_12&utm_content=reminder) |
+| 12 декабря, VK организатора | [Анонс](https://www.maya-velikolepnaya.ru/?utm_source=organizer_vk&utm_medium=organic_social&utm_campaign=maya_2026_12_12&utm_content=announce) | [Напоминание](https://www.maya-velikolepnaya.ru/?utm_source=organizer_vk&utm_medium=organic_social&utm_campaign=maya_2026_12_12&utm_content=reminder) |
+| 12 декабря, Telegram галереи | [Анонс](https://www.maya-velikolepnaya.ru/?utm_source=gallery_tg&utm_medium=referral&utm_campaign=maya_2026_12_12&utm_content=announce) | [Напоминание](https://www.maya-velikolepnaya.ru/?utm_source=gallery_tg&utm_medium=referral&utm_campaign=maya_2026_12_12&utm_content=reminder) |
+
+## Сообщение площадке или партнёру
+
+Здравствуйте! Приглашаем ваших подписчиков на балетно-драматический спектакль «Майя Великолепная» о Майе Плисецкой. Постановка Гедиминаса Таранды проходит в Галерее Ильи Глазунова. Ближайший показ — 28 ноября в 19:00. Билет также даёт право на самостоятельное посещение галереи за час до начала.
+
+Подскажите, пожалуйста, сможете ли вы разместить анонс в вашем канале? Мы подготовим текст, согласованную фотографию и отдельную ссылку на афишу. Также запланированы показы 5 и 12 декабря.
+
+## Сообщение редакции Dance.ru
+
+Здравствуйте! Спасибо за публикацию о спектакле «Майя Великолепная». В вашей карточке указан период до 5 декабря. По информации организатора, также запланирован показ 12 декабря в 19:00 в Галерее Ильи Глазунова. Просим обновить информацию о датах и по возможности добавить ссылку на сайт спектакля: https://www.maya-velikolepnaya.ru/. Актуальные сеансы и билеты доступны на IceTickets. Готовы предоставить подтверждённые сведения и материалы.
+
+Эти обращения подготовлены для проверки и отправки ответственным лицом. Состав адресатов, согласие на использование материалов и условия публикаций уточняются отдельно.
+
 ## Поиск и Директ
 
 Москва. Группы запросов: «Майя Великолепная билеты» и варианты названия; «спектакль о Майе Плисецкой»; «Гедиминас Таранда спектакль Плисецкая» — главная. «Групповое посещение спектакля Москва» и «закрытый показ для компании» — `/corporate/`. Бюджетный прогноз Директа является оценкой, а не гарантией кликов.
